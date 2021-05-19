@@ -1,0 +1,4 @@
+1. AdamW: L2 loss is not compatible with gradient adaptive optimizer, so use weight decay instead of L2
+2.I-vector:
+3.alternative log-mel representations:high temporal resolution may be benificial.so stride 2.5 ms and window 10 ms instead of e.g. stride 10 ms and window 25-32 ms
+4.model combination:decode using multiple LMs and e2e models

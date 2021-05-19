@@ -1,0 +1,25 @@
+1. attention:
+   advantage:
+       no conditional independence assumption
+   disadvantage:
+         too flexibel that it allows non-sequential alignments. This is fine in MT but for asr the input and output generally proceed in the same order
+2. CTC:
+   advantage:
+         strictly monotonic alignment using DP
+   disadvantage: 
+         requires LM and graph-based decoding to obtain good performance unless huge training data available
+3. training: use CTC as an auxilary task to regularize the attention-based encoder network
+4. decoding:
+     1.decoder part:only decode the output of the decoder
+        disadvantage:
+          a.may include deletion and insetion errors because of its flexibel alignment property, which can attend to any portion of the
+          encoder state swquence to predict the next label
+          b. it can prematurely predict the end-of-sentence label, making the hypothesis too short
+          c. it can attend to the same portions as those attended to before, making the hypothesis too lang
+     2. some techniques to slove the disadvantages:
+        a. length penalty -> TODO
+        b. coverge term -> TODO
+     3. this paper: joint decoding:
+        a.rescoring 
+        b.one pass
+        

@@ -1,0 +1,19 @@
+1.input feature:
+   type: mfcc, fbank, fbank-pitch, i-vector, wav
+   window len&&stride:512/256, 400/160, 160/40
+   dim:40, 80
+   operation: global norm, seq-norm
+2.data aug:
+   specAugment
+   MixUp
+   speed perturbation&&time stretch
+   noise augmentation
+   sequence injection
+   volume perturbation
+   shift
+3.subsampling:
+   factor:4, 6
+   position:in the beginning, between layers
+   method:conv stride, conv max pooling, lstm max pooling ...
+3.regularization:
+   

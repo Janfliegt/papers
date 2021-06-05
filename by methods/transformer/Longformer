@@ -1,0 +1,2 @@
+1.local attention + dilated local attention + global attention
+2.small window sizes in lower layers and increase the window sizes gradually in deeper layers

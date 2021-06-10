@@ -1,0 +1,4 @@
+1.joint decoding
+2.coverage term:
+  -防止looping of the same label sequence within a hypothesis
+  -减弱deletion error

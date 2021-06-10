@@ -1,0 +1,6 @@
+1.noam
+2.one-cycle
+3.Restart:
+  -cyclical(soft restart)
+  -SGDR(hard restart)
+4.newbob
